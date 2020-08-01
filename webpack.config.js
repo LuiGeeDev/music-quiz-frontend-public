@@ -15,6 +15,16 @@ module.exports = {
   output: {
     filename: "[name].js?[contentHash]",
     path: path.resolve("./dist"),
+    publicPath: "/",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+      },
+    ],
   },
   plugins: [
     new webpack.BannerPlugin({
