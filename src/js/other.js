@@ -1,7 +1,19 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
-function art() {
-  return <div>Hello, world</div>;
+class Quiz extends React.Component {
+  render() {
+    const name = prompt("Name?");
+    return (
+      <div>
+        <Art name={name} />
+      </div>
+    );
+  }
 }
 
-console.log(art());
+function Art(props) {
+  return <div>Hello, {props.name}</div>;
+}
+
+ReactDOM.render(<Quiz />, document.getElementById("app"));

@@ -1,4 +1,4 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   console.log(event);
-  document.body.innerHTML = "<div>index.html</div>";
+  document.body.innerHTML = `<a href="other.html">Link</a>`;
 });
